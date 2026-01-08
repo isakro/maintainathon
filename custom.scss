@@ -14,18 +14,19 @@ $bluegray: #c7d3e0 !default;
 $darker-green: #5a7a2b !default;
 $light-gray: #f1f3f5 !default;
 $mid-gray: #75776d !default;
-$darker-gray: #3b3b3b !default;
+$darker-gray: #222232 !default;
 $ssla-orange: #ec5e2a;
-$x: #3d3d3d;
+
+$body-bg: #222232;
 
 // Navbar
-$navbar-bg: $x !default;
+$navbar-bg: #000010;
 $navbar-fg: $bluegray !default;
 $navbar-hl: $white !default;
 
 // Links
 // $link-color: $darker-green !default;
-$link-color: $ssla-orange !default;
+$link-color: #dc9656 !default;
 
 // Code blocks
 $code-block-bg: $darker-gray !default;
