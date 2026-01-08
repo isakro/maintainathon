@@ -392,13 +392,12 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 ## Optimizing for speed and efficiency
 
 ## Setup Continuous Integration
-Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, etc. There are several CI tools that can be used, one of the most accessible is Github Actions (but do check out GitLab CI if you work on Gitlab). 
+Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, or producing accessible outputs deriving from the codebase. One notable aspect of CI is that they can be triggered by changes in the codebase, which can effectively automate one's testing environment and documentation-writing processes, ensuring robust software development.
 
-CI pipelines can also be run locally, specifically to deal with tasks that depend on several pieces of code that are connected in complicated ways. While there is a strong temptation to write one unique code that calls different functions in sequence, a better way to operate is to write different pieces dealing with different functions, and then making them interact through GNU [Make](https://www.gnu.org/software/make/). Make is a tool that controls how a software will run (executables, outputs, etc) from a series of source code files. To do this, one can use a [`makefile`](https://makefiletutorial.com/), a file that dictates how different pieces of a pipeline interact. 
+There are several CI tools that can be used, one of the most accessible is Github Actions (but do check out GitLab CI if you work on Gitlab). CI pipelines can also be run locally, specifically to deal with tasks that depend on several pieces of code that are connected in complicated ways. We've written a brief introduction to GitHub Actions to help get you started:
 
-Imagine for example that you have an analysis composed of different steps, each steps producing the input for the next step. In certain situation you will want all steps to run in sequence, but in some situations you would like only certain steps to run (e.g. because other steps have been run previously and need no re-running). A `makefile` orchestrates different pieces using the Make tool. While Make is typically operating on languages that need building (think C and C++), other languages have their own tools doing the same thing, such as Snakemake (for Python) and the library [MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html) (for R).
-
-### More in detail: usage of Github Actions
+<details>
+<summary>Using Github Actions</summary>
 
 Github Actions come in different flavors and can do many different things: for example, if you have setup a website using Github Pages, Github runs actions "under the hood" to build the website after each change committed. But Github Actions can be set-up for our own projects too. There is a whole [marketplace](https://github.com/marketplace?type=actions) of actions to choose from.
 
@@ -499,7 +498,12 @@ jobs:
           force_orphan: true
 ```
 
-However you want to use CI, it is invaluable. Understanding how to do it, one can develop automated workflows that are triggered by code changes, thus ensuring robust software development.  
+</details>
+
+Additionally, CI is useful for orchestrating the interaction of different pieces of a codebase. This supports the superior practice of writing different pieces of code dealing with different functions, rather than writing one large program that calls different functions in sequence. Imagine, for example, that you have an analysis composed of different steps, each steps producing the input for the next step. In certain situations you will want all steps to run in sequence, but in other situations you would like only certain steps to run (e.g. because other steps have been run previously and need no re-running). Make ensures that each component operates in a manner that corresponds with your instructions.
+
+This is typically accomplishing using GNU [Make](https://www.gnu.org/software/make/), a tool that controls how a software will run from a series of source code files. To do this, one can use a [`makefile`](https://makefiletutorial.com/), a file that dictates how different pieces of a pipeline interact. While Make is typically operating on languages that need building (think C and C++), other languages have their own tools doing the same thing, such as Snakemake (for Python) and the library [MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html) (for R).
+
 
 # Further Reading
 ## Research software engineering
