@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this project or want to cite the initiative, please use the following metadata."
+title: "Digital Archaeology Maintainathon"
+abstract: "A community initiative by the SSLA SIG to promote the maintenance, documentation, and preservation of archaeological research software."
+authors:
+  - family-names: "Digital Archaeology Maintainathon Contributors"
+    affiliation: "Scientific Scripting Languages in Archaeology SIG"
+version: 1.0.0
+date-released: 2026-01-12
+repository-code: "https://github.com/sslarch/maintainathon"
+url: "https://sslarch.github.io/maintainathon"
+keywords:
+  - archaeology
+  - research software engineering
+  - software sustainability
+  - open science
+  - open source
+license: CC0
